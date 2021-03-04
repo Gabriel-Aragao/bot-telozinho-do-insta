@@ -1,1 +1,20 @@
 # bot-telozinho-do-insta
+- create github repository
+- clone repository
+- install node
+- install next JS
+- install react
+- install react-dom
+- new script ("dev": "next dev")
+- run yarn dev
+- create pages folder
+- create index.js
+- create and export default function with some div
+- stop server
+- commit to main
+- push
+- sign up vercel.com
+- log in on vercel with github
+- import git repository
+- deploy
+- 
