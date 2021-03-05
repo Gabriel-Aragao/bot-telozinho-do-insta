@@ -7,7 +7,7 @@ function postEmail(request, response){
     case "POST":
       const body = request.body;
       
-      fs.writeFileSync("./public/latestNews.json", JSON.stringify(body, null, 2), err => {
+      fs.writeFile("./public/latestNews.json", JSON.stringify(body, null, 2), err => {
         if(err){
           response.json({"error": "can`t save file", "catched": err});
         }
