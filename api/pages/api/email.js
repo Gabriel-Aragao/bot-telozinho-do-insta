@@ -1,7 +1,11 @@
 import fs from 'fs';
 function postEmail(request, response){
 
-  const method = request.method;
+  try {
+    const method = request.method;
+  } catch (error) {
+    response.json({"error": "can`t get method", "catched": error});
+  }
   try {
     switch(method){
       case "POST":
