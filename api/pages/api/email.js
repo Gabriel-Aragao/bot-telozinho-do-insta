@@ -10,12 +10,16 @@ function postEmail(request, response){
       } catch (error) {
         response.json({"error": "can`t get body", "catched": error});
       }
+      try {
+        fs.writeFileSync("./public/latestNews.json", JSON.stringify(body, null, 2), err => {
+          if(err){
+            response.json({"error": "can`t save file", "catched": err});
+          }
+        });
+      } catch (error) {
+        response.json({"error": "can`t use fs", "catched": error});
+      }
       
-      fs.writeFileSync("./public/latestNews.json", JSON.stringify(body, null, 2), err => {
-        if(err){
-          response.json({"error": "can`t save file", "catched": err});
-        }
-      });
   }
   response.json({"ok":true})
 }
