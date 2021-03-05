@@ -1,5 +1,5 @@
 import fs from 'fs';
-function postEmail(request, response){
+async function postEmail(request, response){
 
   const method = request.method;
 
