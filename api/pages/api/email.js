@@ -28,7 +28,7 @@ function postEmail(request, response){
         response.json({"ok":true})      
     }
   } catch (error) {
-    response.json({"error": "can`t switch", "catched": error});
+    response.json({"error": "can`t switch", "method": method});
   }
 
 }
