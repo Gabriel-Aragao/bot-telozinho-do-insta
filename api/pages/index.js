@@ -19,15 +19,15 @@ export default function Home() {
         <h1 className="title">
           Bem vindo a base do
           <br/>
-          <a href="https://instagram.com/">Telózinho do Insta</a>
+          <a href="https://www.instagram.com/bot.telozinho" target="_blank">Telózinho do Insta</a>
         </h1>
 
         <p className="description">
           Telózinho é o bot que facilita sua vida na hora de compartilhar 
           com os amigos aquela notícia delicinha que você viu na  
-          <a href="https://filipedeschamps.com.br/newsletter"> Newsletter do Filipe Deschamps </a> 
+          <a href="https://filipedeschamps.com.br/newsletter" target="_blank"> Newsletter do Filipe Deschamps </a> 
           que é o Michel Teló original. As notícias do dia saem em forma de posts no  
-          <a href="https://instagram.com/"> Instagram do Telózinho</a> dai é só correr pro abraço,
+          <a href="https://www.instagram.com/bot.telozinho" target="_blank"> Instagram do Telózinho</a> dai é só correr pro abraço,
           você compartilha a notícia com aquele seu amigo desavisado e de quebra ajuda 
           a divulgar essa Newsletter super delicinha.
         </p>
@@ -44,7 +44,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://instagram.com/"
+            href="https://www.instagram.com/bot.telozinho"
             className="card"
             target="_blank"
           >
@@ -73,16 +73,6 @@ export default function Home() {
           </a>
         </div>
       </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          
-        </a>
-      </footer>
 
       <style jsx>{`
 
