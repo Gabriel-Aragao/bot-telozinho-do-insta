@@ -1,15 +1,19 @@
 import fs from 'fs';
-
 function postEmail(request, response){
 
+  const method = request.method;
 
-    const method = request.method;
-    if(method === "POST"){
-      response.json(request.body);
-    } else {
-      response.json({"ok":true});
-    }
-
+  switch(method){
+    case "POST":
+      const body = request.body;
+      
+      fs.writeFileSync("./public/latestNews.json", JSON.stringify(body, null, 2), err => {
+        if(err){
+          response.json({"error": "can`t save file", "catched": err});
+        }
+      });
+  }
+  response.json({"ok":true})
 }
 
 export default postEmail;
