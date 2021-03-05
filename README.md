@@ -11,8 +11,8 @@
 - create index.js -ok
 - create and export default function with some div -ok
 - stop server -ok
-- commit to main
-- push
+- commit to main ok
+- push ok
 - sign up vercel.com
 - log in on vercel with github
 - import git repository

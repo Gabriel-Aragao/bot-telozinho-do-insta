@@ -1,48 +1,74 @@
 import Head from 'next/head'
+import Image from 'next/image'
+
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Bot Telozinho do Insta</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
+        <img
+          src="/avatar-big.png"
+          alt="Filipe Deschamps Pixel Art"
+          className="avatar"
+        />
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Bem vindo a base do
+          <br/>
+          <a href="https://instagram.com/">Telózinho do Insta</a>
         </h1>
 
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          Telózinho é o bot que facilita sua vida na hora de compartilhar 
+          com os amigos aquela notícia delicinha que você viu na  
+          <a href="https://filipedeschamps.com.br/newsletter"> Newsletter do Filipe Deschamps </a> 
+          que é o Michel Teló original. As notícias do dia saem em forma de posts no  
+          <a href="https://instagram.com/"> Instagram do Telózinho</a> dai é só correr pro abraço,
+          você compartilha a notícia com aquele seu amigo desavisado e de quebra ajuda 
+          a divulgar essa Newsletter super delicinha.
         </p>
 
         <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
 
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+          <a 
+            href="https://filipedeschamps.com.br/newsletter" 
+            className="card"
+            target="_blank"
+          >
+            <h3>Deschamps Newsletter &rarr;</h3>
+            <p>Se cadastra agora na Newsletter pra não perder nenhuma notícia.</p>
           </a>
 
           <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
+            href="https://instagram.com/"
             className="card"
+            target="_blank"
           >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+            <h3>Instagram do Telózinho &rarr;</h3>
+            <p>Aqui você pode compartilhar as notícias que você mais curtiu.</p>
+          </a>
+
+          <a 
+            href="https://github.com/Gabriel-Aragao/bot-telozinho-do-insta" 
+            className="card"
+            target="_blank"
+          >
+            <h3>GitHub &rarr;</h3>
+            <p>Dá aquela conferida no GitHub do projeto.</p>
           </a>
 
           <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href="https://www.youtube.com/watch?v=EW7m2WIvFgQ&list=PLMdYygf53DP7FJzPslLnmqp0QylyFfA8a"
             className="card"
+            target="_blank"
           >
-            <h3>Deploy &rarr;</h3>
+            <h3>Crie o seu Telózinho &rarr;</h3>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              A playlist que me ensinou como colocar o Telózinho no ar. 
             </p>
           </a>
         </div>
@@ -54,23 +80,36 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
+          
         </a>
       </footer>
 
       <style jsx>{`
+
         .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
+          min-height: 80vh;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
           flex-direction: column;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
           justify-content: center;
+          -webkit-align-items: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
-        }
+          font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI, Helvetica Neue,Helvetica,Arial,sans-serif;
+          -webkit-font-smoothing: antialiased;
+          color: #333333;
+          text-align: center;
+      }
 
         main {
-          padding: 5rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;
@@ -87,8 +126,11 @@ export default function Home() {
           align-items: center;
         }
 
-        footer img {
-          margin-left: 0.5rem;
+        .avatar{
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          margin: 2rem 0;
         }
 
         footer a {
@@ -98,7 +140,7 @@ export default function Home() {
         }
 
         a {
-          color: inherit;
+          color: #0070f3;
           text-decoration: none;
         }
 
@@ -116,17 +158,20 @@ export default function Home() {
         .title {
           margin: 0;
           line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
+          font-size: 3.5rem;
           text-align: center;
+          -webkit-letter-spacing: -0.02em;
+          -moz-letter-spacing: -0.02em;
+          -ms-letter-spacing: -0.02em;
+          letter-spacing: -0.02em;
         }
 
         .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
+          max-width: 700px;
+          line-height: 1.1;
+          font-size: 1.2rem;
+          text-align: justify;
+          
         }
 
         code {
@@ -145,7 +190,7 @@ export default function Home() {
           flex-wrap: wrap;
 
           max-width: 800px;
-          margin-top: 3rem;
+          margin-top: 0.5rem;
         }
 
         .card {
@@ -187,6 +232,7 @@ export default function Home() {
             width: 100%;
             flex-direction: column;
           }
+
         }
       `}</style>
 
