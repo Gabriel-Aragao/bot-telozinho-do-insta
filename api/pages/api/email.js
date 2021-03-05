@@ -1,7 +1,7 @@
 import fs from 'fs';
 function postEmail(request, response){
 
-  let method = request.method;
+  const method = request.method;
   try {
     switch(method){
       case "POST":
