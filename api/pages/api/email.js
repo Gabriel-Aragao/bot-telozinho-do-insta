@@ -3,12 +3,7 @@ function postEmail(request, response){
 
   try {
     const method = request.method;
-  } catch (error) {
-    response.json({"error": "can`t get method", "catched": error});
-  }
-  try {
     if(method === "POST"){
-      response.json({"error": "if works"});
       try {
         const body = request.body;
       } catch (error) {
