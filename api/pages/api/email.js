@@ -1,8 +1,9 @@
 import fs from 'fs';
 function postEmail(request, response){
 
+  let method = request.method;
   try {
-    switch(request.method){
+    switch(method){
       case "POST":
         try {
           const body = request.body;
@@ -18,9 +19,13 @@ function postEmail(request, response){
         } catch (error) {
           response.json({"error": "can`t use fs", "catched": error});
         }
+        response.json({"created":true});
+        break
+        default:
+          response.json({"ok":true})
+
         
     }
-    response.json({"ok":true})
   } catch (error) {
     response.json({"error": "can`t switch", "catched": error});
   }
