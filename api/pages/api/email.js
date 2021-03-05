@@ -8,6 +8,7 @@ function postEmail(request, response){
   }
   try {
     if(method === "POST"){
+      response.json({"error": "if works"});
       try {
         const body = request.body;
       } catch (error) {
