@@ -5,10 +5,15 @@ function postEmail(request, response){
 
   switch(method){
     case "POST":
-      const body = request.body;
+      try {
+        const body = request.body;
+      } catch (error) {
+        response.json({"error": "can`t get body", "catched": error});
+      }
+      
       fs.writeFileSync("./public/latestNews.json", JSON.stringify(body, null, 2), err => {
         if(err){
-          console.log(err);
+          response.json({"error": "can`t save file", "catched": err});
         }
       });
   }
