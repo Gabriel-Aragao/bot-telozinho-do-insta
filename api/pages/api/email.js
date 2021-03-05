@@ -1,27 +1,36 @@
 import fs from 'fs';
 function postEmail(request, response){
 
-  const method = request.method;
-
-  switch(method){
-    case "POST":
-      try {
-        const body = request.body;
-      } catch (error) {
-        response.json({"error": "can`t get body", "catched": error});
-      }
-      try {
-        fs.writeFileSync("./public/latestNews.json", JSON.stringify(body, null, 2), err => {
-          if(err){
-            response.json({"error": "can`t save file", "catched": err});
-          }
-        });
-      } catch (error) {
-        response.json({"error": "can`t use fs", "catched": error});
-      }
-      
+  try {
+    const method = request.method;
+  } catch (error) {
+    response.json({"error": "can`t get method", "catched": error});
   }
-  response.json({"ok":true})
+
+  try {
+    switch(method){
+      case "POST":
+        try {
+          const body = request.body;
+        } catch (error) {
+          response.json({"error": "can`t get body", "catched": error});
+        }
+        try {
+          fs.writeFileSync("./public/latestNews.json", JSON.stringify(body, null, 2), err => {
+            if(err){
+              response.json({"error": "can`t save file", "catched": err});
+            }
+          });
+        } catch (error) {
+          response.json({"error": "can`t use fs", "catched": error});
+        }
+        
+    }
+    response.json({"ok":true})
+  } catch (error) {
+    response.json({"error": "can`t switch", "catched": error});
+  }
+
 }
 
 export default postEmail;
