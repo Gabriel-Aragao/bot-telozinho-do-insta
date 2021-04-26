@@ -20,26 +20,7 @@ async function postEmail(request, response){
       };
       response.json(res);
     }
-    response.json(results.json
-Not shared
-Type
-Unknown File
-Size
-115 KB (117,759 bytes)
-Storage used
-115 KB (117,759 bytes)
-Location
-melhoresdoanomonteiro
-Owner
-me
-Modified
-Aug 18, 2020 by me
-Opened
-2:51 PM by me
-Created
-Aug 22, 2020
-Add a description
-Viewers can download
+    response.json(
 [
     {
         "categoria": "",
